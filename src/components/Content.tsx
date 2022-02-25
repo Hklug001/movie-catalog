@@ -1,22 +1,8 @@
 import { MovieCard } from "./MovieCard";
+
+import { GenreResponseProps, MovieProps } from "../types";
+
 import "../styles/content.scss";
-
-interface MovieProps {
-  imdbID: string;
-  Title: string;
-  Poster: string;
-  Ratings: Array<{
-    Source: string;
-    Value: string;
-  }>;
-  Runtime: string;
-}
-
-interface GenreResponseProps {
-  id: number;
-  name: "action" | "comedy" | "documentary" | "drama" | "horror" | "family";
-  title: string;
-}
 
 type ContentProps = {
   movies: MovieProps[];
